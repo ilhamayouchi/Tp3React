@@ -1,38 +1,133 @@
-.App {
-  text-align: center;
+.page {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 28px 20px 60px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.eyebrow {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #1a8aa5;
+  margin: 0 0 6px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.entete {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 40px;
+}
+.entete .eyebrow { color: #1a8aa5; }
+.titre-principal {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 400;
+  color: #222a33;
+}
+.nav { display: flex; gap: 18px; padding-top: 4px; }
+.nav a {
+  font-size: 12px;
+  color: #5b6672;
+  text-decoration: none;
+}
+.nav a:hover { color: #222a33; }
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+.hero h2 {
+  margin: 0 0 6px;
+  font-size: 30px;
+  font-weight: 400;
+  color: #222a33;
+}
+.hero p { margin: 0; font-size: 12px; color: #5b6672; }
+.logo-rond {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.grille {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-items: start;
+}
+@media (max-width: 640px) {
+  .grille { grid-template-columns: 1fr; }
+}
+
+.carte {
+  background: #fff;
+  border: 1px solid #e5e9ee;
+  border-radius: 14px;
+  padding: 18px;
+}
+.carte-tete {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.carte h3 {
+  margin: 0 0 14px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #222a33;
+}
+.carte p { margin: 0 0 14px; font-size: 12px; color: #5b6672; }
+
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 9px 14px;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn-primaire { background: #222a33; color: #fff; }
+.btn-doux { background: #e6f5fa; color: #17788f; }
+
+.compteur { font-size: 24px; font-weight: 700; color: #d9434b; }
+.compteur-texte { font-size: 11px; color: #5b6672; margin-left: 6px; }
+.bloc-compteur { margin-bottom: 18px; }
+
+.badge {
+  min-width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #e6f5fa;
+  color: #17788f;
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.taches { list-style: none; margin: 0 0 14px; padding: 0; }
+.taches li {
+  background: #f7f8fa;
+  border-radius: 8px;
+  padding: 11px 9px;
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: #3d4650;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.form-tache { display: flex; gap: 8px; align-items: stretch; }
+.form-tache input {
+  flex: 1;
+  border: 1px solid #dde2e8;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 13px;
+  outline: none;
 }
+.role { font-size: 12px; color: #5b6672; margin: 0 0 14px; }
+.role strong { color: #3d4650; }
+.carte audio { width: 100%; }
